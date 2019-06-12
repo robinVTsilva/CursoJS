@@ -1,23 +1,29 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Exercicio 01</title>
 </head>
+
 <body>
     <div id="app">
-        <input type="text" class="nome">
-        <button class="botao">Adicionar</button>
+        <button id="novo">Criar Quadrado</button>
+        <div id="caixa"></div>
     </div>
 
     <script>
-        var inputElement = document.querySelector('input.nome');
-        var btnElement = document.querySelector('button.botao');
-
-        btnElement.onclick = function() {
-            var text = inputElement.value;
-
-            alert(text);
-        }
+        var btnElement = document.getElementById('new');
+        var squaresElement = document.getElementById('squares');
+        
+        btnElement.onclick = function () {
+            var square = document.createElement('div');
+            
+            square.style.width = '100px';
+            square.style.height = '100px';
+            
+            square.style.backgroundColor = '#F00';
+            squaresElement.appendChild(square);
+        };
     </script>
 </body>
 
