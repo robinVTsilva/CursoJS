@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" class="nome">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        var inputElement = document.querySelector('input.nome');
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function() {
+            var text = inputElement.value;
+
+            alert(text);
+        }
+    </script>
+</body>
+
+</html>
