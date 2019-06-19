@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <button id="novo">Novo quadrado</button>
+
+    <div id="caixa"></div>
+
+    <script>
+        var btnElement = document.getElementById('novo');
+        var squaresElement = document.getElementById('caixa');
+        function getRandomColor() {
+          var letters = '0123456789ABCDEF';
+          var color = '#';
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+
+        btnElement.onclick = function () {
+          var caixa = document.createElement('div');
+          caixa.style.width = '100px';
+          caixa.style.height = '100px';
+          caixa.style.backgroundColor = '#F00';
+          caixa.onmouseover = function () {
+            caixa.style.backgroundColor = getRandomColor();
+          }
+
+          squaresElement.appendChild(caixa);
+        };
+      </script>
+</body>
+</html>
